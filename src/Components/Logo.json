@@ -1,0 +1,23 @@
+[
+    {
+      "Src": "Shipping",
+      "title": "Free Shipping",
+      "description": "Free shipping on all order"
+    },
+    {
+      "Src": "Support",
+      "title": "Support 24/7",
+      "description": "Free shipping on all order"
+    },
+    {
+      "Src": "Money",
+      "title": "Money Return",
+      "description": "Free shipping on all order"
+    },
+    {
+      "Src": "Off",
+      "title": "Order Discount",
+      "description": "Free shipping on all order"
+    }
+  ]
+  

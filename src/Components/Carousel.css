@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Lobster&family=Martian+Mono:wght@100..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+.main-Cont{
+  background-color: #F0E0FF;
+}
+.carousel {
+  position: relative;
+  overflow: hidden;
+  height: 600px;
+}
+
+.carousel-slide {
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+  transition: transform 0.8s ease, opacity 0.8s ease;
+}
+
+.carousel-slide.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.carousel-slide.prev {
+  transform: translateX(-100%);
+}
+
+.carousel-slide.next {
+  transform: translateX(100%);
+}
+
+.text-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+.carousel h1 {
+  font-size: 70px;
+  margin-bottom: 10px 30px 40px 40px;
+  /* font-weight: 600; */
+
+}
+.carousel h4 {
+  font-size: 25px;
+  margin-top: 150px;
+}
+.carousel-image {
+  width: 100%;
+  height: auto;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  color: #F0E0FF;
+  font-size: 48px;
+  font-weight: 100;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+.main-Cont:hover .carousel-control-prev {
+  color: #5d5b5e;
+}
+.main-Cont:hover 
+.carousel-control-next {
+  color: #5d5b5e;
+}
+.carousel-control-prev {
+  left: -90px;
+}
+
+.carousel-control-next {
+  right: -90px;
+}
+
+@media (max-width: 1400px) {
+  .carousel {
+    height: 470px;
+  }
+  .carousel h1 {
+    font-size: 35px;
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+  .carousel h4 {
+    font-size: 1em;
+    margin-bottom: 5px;
+    margin-top: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel {
+    height: 450px;
+  }
+  .carousel h1 {
+    font-size: 30px;
+    margin-bottom: 10px;
+    font-weight: 500;
+    text-align: center;
+  }
+  .carousel h4 {
+    font-size: 14px;
+    margin-bottom: 5px;
+    text-align: center;
+    margin-top: 10px;
+  }
+  .carousel-control-prev {
+    left: 10px;
+  }
+  
+  .carousel-control-next {
+    right: 10px;
+  }
+  .buttonDiv{
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.button {
+  border: 1px solid black; 
+  color: black; 
+  cursor: pointer;
+  font-size: 17px;
+  font-weight: 600;
+  padding: 10px 20px;
+  width: 190px;
+  height: 60px;
+  position: relative;
+  overflow: hidden;
+  background-color: transparent; 
+  transition: color 0.3s ease, background-color 0.3s ease, border 0.3s ease; 
+  background-image: linear-gradient(90deg, #F0E0FF, #F0E0FF);
+  background-size: 200% 100%;
+  background-position: left bottom;
+  border-radius: 0%;
+}
+
+.button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #A020F0, #A020F0);
+  transition: left 0.5s ease;
+  z-index: 0;
+  background-size: 200% 100%;
+  background-position: left bottom;
+}
+
+.button:hover::before {
+  left: 0;
+}
+
+.button:hover {
+  color: white; 
+  border: 1px solid black;
+  font-size: 16px;
+  padding: 10px 20px; 
+}
+
+.button span {
+  position: relative;
+  z-index: 1; /* Ensure text is above gradient */
+}

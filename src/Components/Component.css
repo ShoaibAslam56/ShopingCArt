@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Lobster&family=Martian+Mono:wght@100..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+/* LogoBaner Styling */
+#LogoBaner p {
+    line-height: 1;
+}
+#LogoBaner-Col img{
+    width: 50px;
+}
+@media (max-width:570px) {
+    #LogoBaner-Col{
+        display: flex;
+        justify-content: center;
+    }
+    #LogoBaner-Col .col-lg-3{
+        display: flex;
+        justify-content: center;
+    }
+    #LogoBaner-Col .col-lg-9{
+        text-align: center;
+        margin-bottom: 15px;
+        border-bottom: 1px solid black;
+    }
+    #LogoBaner-Col img{
+        width: 40px;
+    }
+}
+#LogoBaner-Col img:hover {
+    animation: vibrate 0.2s linear infinite;
+}
+
+@keyframes vibrate {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-2px); }
+    50% { transform: translateX(2px); }
+    75% { transform: translateX(-2px); }
+    100% { transform: translateX(0); }
+}
+
+/* Scroll to top button  */
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    z-index: 1000;
+  }
+  
+  @media (max-width:768px) {
+    .scroll-to-top {
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+      z-index: 1000;
+    }
+  }
+  
+  /* Keyframe animation for moving the icon */
+  @keyframes moveIconFromBottom {
+    0% {
+      transform: translateY(50px); /* Start from below the button */
+      opacity: 0;
+    }
+    50% {
+      transform: translateY(-10px); /* Move to near the center */
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(0); /* Center of the button */
+    }
+  }
+  
+  .scroll-button {
+    background-color: #0056b3;
+    border: none;
+    color: white;
+    width: 45px;
+    height: 45px;
+    font-size: 18px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s ease-in-out;
+    position: relative;
+  }
+  
+  /* Apply animation to the icon on hover */
+  .scroll-button:hover .fa-angles-up {
+    animation: moveIconFromBottom 0.5s infinite; /* Adjust duration and repetition as needed */
+  }
+  
+  /* Ensure the icon is centered */
+  .scroll-button .fa-angles-up {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  /* Our blogs styling  */
+
+  .card {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 30px;
+  }
+  
+  .card-image {
+    width: 100%;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .card-image:hover {
+    transform: scale(1.2);
+  }
+  
+  .card-description {
+    position: absolute;
+    bottom: -30px;
+    width: 80%;
+    left: 10%;
+    background-color: white;
+    padding: 10px;
+    text-align: center;
+    border: none;
+  }
+  
+ .tag-new,
+ .tag-discount {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #1089ec;
+    color: #fff;
+    padding-left: 10px; 
+    padding-right: 10px; 
+    border-radius: 0px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+
+ .tag-discount {
+    top: 10px;
+    left: 100px;
+    background-color: #3f96cd;
+}
+
+
+/* Fotor styling */
+#Fotor{
+  background-color: #F7F7F7;
+}
+#Fotor .container{
+  padding: 35px;
+}
+#Fotor h2 {
+  margin-top: 35px;
+  font-size: 30px;
+  font-family: "Kalam", cursive;
+  font-weight: 800;
+}
+#Fotor p {
+  line-height: 1;
+  color: rgb(159, 162, 165);
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 550;
+  transform: 0.3s ease-in-out;
+  cursor:pointer;
+}
+#Fotor p:hover{
+  color: rgb(160, 66, 159);
+}
+#Fotor input{
+  border: 0;
+  border-bottom: 1px solid black;
+  background-color: transparent;
+  border-radius: 0%;
+}
+@media (max-width:768px) {
+  #Fotor h2 {
+    margin-top: 0px;
+  }
+  #Fotor .container{
+    padding: 10px;
+  }
+}
